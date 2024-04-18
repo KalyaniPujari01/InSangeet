@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SignUp</title>
+  </head>
+  <body
+    class="bg-cover bg-center h-screen"
+    style="background-image: url('../static/img3.jpg')"
+  >
+    <div class="min-h-screen flex justify-center items-center">
+      <div
+        class="bg-white bg-opacity-60 shadow-md rounded px-8 pt-7 pb-8 mb-4 w-full max-w-md justify-center items-center"
+      >
+        <form action="register" method="post">
+          <p class="text-3xl mb-4 text-slate-900 text-center font-bold">
+            REGISTRATION FORM
+          </p>
+
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            class="w-full h-10 rounded-xl px-3 focus:outline-none mb-4"
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            class="w-full h-10 rounded-xl px-3 focus:outline-none mb-4"
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            class="w-full h-10 rounded-xl px-3 focus:outline-none mb-4"
+          />
+
+          <div class="flex items-center mb-4">
+            <label class="text-gray-800 mr-5">Gender:</label>
+            <input type="radio" name="gender" value="male" />
+            <label class="ml-2">Male</label>
+
+            <input type="radio" name="gender" value="female" class="ml-4" />
+            <label class="ml-2">Female</label>
+
+            <input type="radio" name="gender" value="other" class="ml-4" />
+            <label class="ml-2">Other</label>
+          </div>
+
+          <div class="flex items-center mb-4">
+            <label class="text-gray-800 mr-5">Role:</label>
+            <input type="radio" name="role" value="admin" />
+            <label class="ml-2">Admin</label>
+
+            <input type="radio" name="role" value="customer" class="ml-4" />
+            <label class="ml-2">User</label>
+          </div>
+
+          <input
+            type="submit"
+            value="SIGN UP"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+          />
+        </form>
+
+        <div class="mt-4 text-center">
+          <p class="text-gray-600">
+            Already have an account?
+            <a href="#" class="text-blue-500 hover:underline">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
