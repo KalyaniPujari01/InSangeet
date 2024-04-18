@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>index-page</title>
+  </head>
+  <body
+    class="bg-cover bg-center h-screen"
+    style="background-image: url('../static/hhome.jpeg')"
+  >
+    <nav class="fixed w-full z-10 top-0">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden rounded-xl h-8 w-auto"
+                src="../static/insangeet.jpeg"
+                alt="Logo"
+              />
+
+              <img
+                class="hidden rounded-xl lg:block h-8 w-auto"
+                src="../static/insangeet.jpeg"
+                alt="Logo"
+              />
+              <p class="text-2xl font-bold ml-2 text-white">InSangeet</p>
+            </div>
+          </div>
+          <!-- Hamburger Menu -->
+          <div class="flex lg:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- Menu -->
+          <div class="hidden lg:flex lg:items-center">
+            <!-- Search Bar -->
+            <div class="mt-1 relative">
+              <input
+                class="bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 px-4 rounded-lg pl-10"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-6 absolute top-1.5 left-3 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+
+            <a
+              href="home"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Home
+            </a>
+            <a
+              href="courses"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Songs
+            </a>
+            <a
+              href="contact"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Login
+            </a>
+            <a
+              href="login"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              SignUp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="lg:hidden" id="mobile-menu" style="display: none">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="home"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            Home
+          </a>
+          <a
+            href="courses"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            Songs
+          </a>
+          <a
+            href="contact"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            Login
+          </a>
+          <a
+            href="login"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            SignUp
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          var mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.style.display =
+            mobileMenu.style.display === "none" ||
+            mobileMenu.style.display === ""
+              ? "block"
+              : "none";
+        });
+    </script>
+
+    <div class="absolute md:mt-64 mt-20 md:ml-16 ml-5">
+      <div>
+        <h1 class="text-5xl md:text-7xl font-bold font-serif text-white">
+          Welcome to InSangeet :)
+        </h1>
+        <p class="text-2xl md:text-3xl font-bold text-white mt-2 font-serif">
+          "Sangeet is the soulful melody that resonates through the heart,
+          stitching together moments into memories."
+        </p>
+        <button
+          class="bg-blue-700 h-11 w-24 md:w-32 rounded-lg ml-3 mt-3 md:mt-5 hover:bg-blue-500 text-white hover:text-slate-700 active:bg-blue-400"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
