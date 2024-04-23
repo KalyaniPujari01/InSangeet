@@ -1,0 +1,415 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User-Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="fixed w-full bg-gray-700 z-10 top-0">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+              <img
+                class="block lg:hidden rounded-xl h-8 w-auto"
+                src="../static/insangeet.jpeg"
+                alt="Logo"
+              />
+
+              <img
+                class="hidden rounded-xl lg:block h-8 w-auto"
+                src="../static/insangeet.jpeg"
+                alt="Logo"
+              />
+              <p class="text-2xl font-bold ml-2 text-white">InSangeet</p>
+            </div>
+          </div>
+          <!-- Hamburger Menu -->
+          <div class="flex lg:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- Menu -->
+          <div class="hidden lg:flex lg:items-center">
+            <!-- Search Bar -->
+            <div class="mt-1 relative">
+              <input
+                class="bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 py-1 px-4 rounded-lg pl-10"
+                type="text"
+                placeholder="Search..."
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-6 absolute top-1.5 left-3 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+
+            <a
+              href="home"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Home
+            </a>
+            <a
+              href="discover"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Discover
+            </a>
+            <a
+              href="songlibrary"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              Library
+            </a>
+            <a
+              href="login"
+              class="ml-4 px-3 py-2 text-white hover:bg-blue-300 hover:text-black rounded-lg focus:outline-none focus:bg-gray-700"
+            >
+              SignOut
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="lg:hidden" id="mobile-menu" style="display: none">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="home"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            Home
+          </a>
+          <a
+            href="discover"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            Discover
+          </a>
+          <a
+            href="songlibrary"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            Library
+          </a>
+          <a
+            href="login"
+            class="block px-3 py-2 rounded-lg text-base font-medium text-white hover:bg-blue-300 hover:text-black"
+          >
+            SignOut
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          var mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.style.display =
+            mobileMenu.style.display === "none" ||
+            mobileMenu.style.display === ""
+              ? "block"
+              : "none";
+        });
+    </script>
+
+    <!-- New Releases -->
+    <div class="container mx-auto py-8 mt-20">
+      <h3 class="text-2xl font-bold ml-3 mb-2">New Releases</h3>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+      >
+        <div
+          class="shadow-lg rounded-lg overflow-hidden justify-center items-center"
+        >
+          <img
+            src="../static/img.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">New Songs Mix</h3>
+          </div>
+        </div>
+        <!-- Repeat similar divs for other songs -->
+        <div
+          class="shadow-lg rounded-lg overflow-hidden justify-center items-center"
+        >
+          <img
+            src="../static/img2.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">New Songs Hindi</h3>
+          </div>
+        </div>
+
+        <div
+          class="shadow-lg rounded-lg overflow-hidden justify-center items-center"
+        >
+          <img
+            src="../static/img3.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">New Songs English</h3>
+          </div>
+        </div>
+
+        <div
+          class="shadow-lg rounded-lg overflow-hidden justify-center items-center"
+        >
+          <img
+            src="../static/img5.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">1989 (Taylor's Version)</h3>
+          </div>
+        </div>
+
+        <div
+          class="shadow-lg rounded-lg overflow-hidden justify-center items-center"
+        >
+          <img
+            src="../static/img6.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="p-4 text-center">
+            <h3 class="text-xl font-bold">Intezar Tera</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top-Charts -->
+    <div class="container mx-auto py-8">
+      <h3 class="text-2xl font-bold ml-3 mb-2">Top-Charts</h3>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+      >
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/img9.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Romance Top 20</h3>
+          </div>
+        </div>
+        <!-- Repeat similar divs for other songs -->
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/img10.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Weekly Top 20</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/img11.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Dance Top 20</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/img12.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Hip-Hop Top 20</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/img13.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">HeartBreak Top 20</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indie-Music -->
+    <div class="container mx-auto py-8">
+      <h3 class="text-2xl font-bold ml-3 mb-2">Indie Music</h3>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+      >
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/img16.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Latest-indie</h3>
+          </div>
+        </div>
+        <!-- Repeat similar divs for other songs -->
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/indierock.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Indie-rock</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/indiechillmusic.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Indie-ChillMusic</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/indiehiphop.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Indie-Hip-Hop</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/indienlish.jpeg"
+            alt="Song"
+            class="object-cover w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Indie English</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Indie Artists -->
+    <div class="container mx-auto py-8">
+      <h3 class="text-2xl font-bold ml-3 mb-2">Top Indie Artists</h3>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+      >
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/prateekkuhuda.jpeg"
+            alt="Song"
+            class="rounded-full w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Prateek Kuhad</h3>
+          </div>
+        </div>
+        <!-- Repeat similar divs for other songs -->
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/thelocaltrain.jpeg"
+            alt="Song"
+            class="w-full rounded-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">The Local Train</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/nikitagandhi.jpeg"
+            alt="Song"
+            class="rounded-full w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Nikita Gandhi</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/khoshalraghu.jpeg"
+            alt="Song"
+            class="rounded-full w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Khoshal Raghu</h3>
+          </div>
+        </div>
+
+        <div class="rounded-lg overflow-hidden justify-center items-center">
+          <img
+            src="../static/harshperwin.jpeg"
+            alt="Song"
+            class="rounded-full w-full"
+          />
+          <div class="text-center">
+            <h3 class="text-xl font-bold">Harsh Perwin</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
